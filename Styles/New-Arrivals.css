@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sort-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.sort-container label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.sort-container select {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.no-products {
+    background-color: #aeebf4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.info {
+    font-size: 1.2rem;
+    color: #0384ce;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}

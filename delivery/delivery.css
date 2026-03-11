@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex; /* Enable flexbox for form */
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+form select,
+form input {
+    width: 100%;
+    padding: 10px; /* Set height of form fields */
+    margin: 8px 0; /* Set space between form fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+form button {
+    width: 150px; /* Fixed width for the button */
+    padding: 8px; /* Set height of the button */
+    margin: 15px 0; /* Space between the button and other fields */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #007BFF; /* Button color */
+    color: #fff; /* Text color */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 13px; /* Font size for the button */
+    display: flex; /* Enable flexbox for the button */
+    justify-content: center; /* Center the text horizontally */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading text */
+}

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #00a0e3;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-cart img {
+    width: 40px;
+}
+
+.welcome {
+    font-size: 18px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile-section p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.manage-details {
+    background-color: #ccc;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.manage-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-row button {
+    padding: 10px 20px;
+    background-color: #00a0e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-row button:hover {
+    background-color: #007aad;
+}
+
+.logout-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #e60000;
+}
+
+.footer{
+    background-color: #00a0e3;
+    padding: 3px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}

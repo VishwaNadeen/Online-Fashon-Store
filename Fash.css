@@ -1,0 +1,278 @@
+*{
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  
+  header{
+    position:relative;
+    width:100%;
+    height:70px;
+    background:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  
+  .Falcon{
+    display:flex;
+    align-items:center;
+    height:100%;
+    padding:4%;
+    width:20%;
+    justify-content:space;
+  }
+  
+  
+  
+  
+  .Falcon h1{
+    margin-left:5%;
+    
+  }
+  
+  .navbar{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-evently;
+    
+  }
+  
+  
+  .searchBox{
+      position:relative;
+      width:90%;
+      
+  }
+  
+  .searchBox input{
+      width:90%;
+      height:30px;
+      border-radius:15px;
+      padding:5%;
+      text-indent:10px;
+      
+  }
+      
+  #searchIcon{
+      position:relative;
+      left: -1px;
+      font-size:23px;
+      color:white;
+      
+  }
+  
+  
+  ul{
+      width:60%;
+      
+  }
+  
+  
+  
+  ul li{
+      display: inline-block;
+      margin-left:4%;
+      transition:all 0.5s ease;
+      padding:1%;
+  }
+  
+  
+  
+  ul li a{           /*color font home about us....*/
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  padding:2% 3%;
+  }
+  ul li a:active, :focus{
+      text-decoration:underline;
+      font-weight:700;
+      color: black;  /*color font search*/
+  }
+  
+  .logo img{
+      width:71px;
+      height:auto;
+  
+  }
+  
+  
+  
+  /*end of the Nevigation bar*/
+  
+  /* Container styles */
+  .container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  #root {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  
+  /* Sidebar styles */
+  .slidbar {
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .head {
+    background-color: goldenrod;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+  }
+  
+  /* Product box styles */
+  .product-box { /* More specific class name */
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .images {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .bottom {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: space-between;
+    height: 110px; /* Adjust height as needed */
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: red;
+  }
+  
+  
+  button:hover{
+      background-color:orange;
+      
+  }		
+  .modal {
+    display: none; /* Initially hidden */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if content is larger than the modal */
+    background-color: rgba(0,0,0,0.4); /* Transparent black background */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could adjust width as needed */
+    text-align: center;
+  }
+  
+  .confirm-btn, .close-btn {
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    font-weight: bold;
+  }
+  
+  .confirm-btn {
+    background-color: green;
+  }
+  
+  .close-btn:hover,
+  .confirm-btn:hover {
+    opacity: 1;
+  }
+  
+  .close-btn {
+    background-color: red;
+  }			
+  .foot
+  {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      padding: 10px   0;
+      border-top: 1px solid #333;
+  }
+  
+  * {
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Century Gothic", sans-serif;
+  }
+  
+  Sidebar styles 
+  .sidebar {
+    height: 100%;
+    margin-bottom:50px;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 116px;
+  }
+  
+  .sidebar button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #585454;
+    display: block;
+    padding: 6px 8px 6px 16px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 20px;
+    cursor:pointer;
+  }
+  

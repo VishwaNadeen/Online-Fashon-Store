@@ -1,0 +1,113 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.signup-button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+    background-color: #0056b3;
+}
+
+/* Terms and conditions styling */
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#con {
+    font-size: 14px;
+}
+
+#con a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#con a:hover {
+    text-decoration: underline;
+}
+
+/* Login link */
+.login-link {
+    text-align: center;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%;
+    }
+}

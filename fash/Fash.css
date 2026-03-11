@@ -1,0 +1,253 @@
+/* General Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 80%;
+}
+
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 70%;
+}
+
+/* Product Boxes */
+.box {
+  width: 30%;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.img-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.bottom {
+  text-align: center;
+}
+
+.bottom h2 {
+  color: #333;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.bottom button {
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #f59d19;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.bottom button:hover {
+  background-color: #434142;
+}
+
+/* Cart Section */
+.slidbar {
+  height: auto;
+  width: 28%;
+  background-color: #e1dcdc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #040404;
+  margin-left: 100px;
+}
+
+#cart-items {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.cart-item h2 {
+  color: #000000;
+}
+
+.remove-button {
+  background-color: #ee1313;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #cf0202;
+}
+
+/* Footer Section */
+.foot h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.foot h2 {
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  font-family: 15px;
+  border-radius: 8px;
+  margin-left: 85px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-left: 70px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+  background-color: #17931e;
+}
+
+.button2:hover {
+  background-color: #17931e;
+}
+
+.delete {
+  background-color: #ee0044;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 105px;
+  margin-top: 20px;
+}
+
+.delete:hover {
+  background-color: #ae0d0d;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.confirm-btn, .close-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #45a049;
+}
+
+.close-btn {
+  background-color: #b83b5e;
+  color: white;
+  margin-left: 10px;
+}
+
+.close-btn:hover {
+  background-color: #f08a5d;
+}
+
+/* Search Bar */
+.search-bar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 300px;
+  margin-right: 20px;
+}
+
+/* Cart Icon */
+.cart-icon {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}

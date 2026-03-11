@@ -1,0 +1,76 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for better contrast */
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px; /* Set a max width for the form */
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    background-color: white; /* White background for the content */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 15px; /* Space between form elements */
+}
+
+label {
+    font-weight: bold; /* Make labels bold */
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px; /* Input padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4CAF50; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+a button {
+    background-color: #f44336; /* Red background for Cancel button */
+}
+
+a button:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark text for the heading */
+}
