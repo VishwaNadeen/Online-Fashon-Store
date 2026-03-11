@@ -31,34 +31,36 @@ if (isset($_POST["submit"])) {
 <head>
     <title>AUROSE FASHION - Contact Us</title>
     <link rel="stylesheet" href="ContactUs.css">
-    <link rel="icon" href="images/icon.png"/>
+    <link rel="icon" href="../images/icon.png"/>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <h1><a href="Home.html">AUROSE FASHION</a></h1>
+            <h1><a href="../Home.html">AUROSE FASHION</a></h1>
         </div>
     
         <nav>
-        <a href="Home.html">HOME</a>
-        <a href="Men.html">MEN</a>
-        <a href="Women.html">WOMEN</a>
-        <a href="Kids.html">KIDS</a>
+        <a href="../Home.html">HOME</a>
+        <a href="../Men.html">MEN</a>
+        <a href="../Women.html">WOMEN</a>
+        <a href="../Kids.html">KIDS</a>
         <a href="H&M.html">HOME & LIVING</a>
-        <a href="New-Arrivals.html">NEW ARRIVALS</a>
+        <a href="../New-Arrivals.html">NEW ARRIVALS</a>
         </nav>
         
         <div class="search-bar">
             <input type="text" placeholder="Search for products, categories and more" />
         </div>
         
-        <div class="cart">
-            <img src="Images/cart.png" class="cart-icon">
-        </div>   
+        <a href="../cart/index.php">
+            <div class="cart">
+                <img src="../Images/cart.png" class="cart-icon">
+            </div>
+        </a>
     
         <div class="h-icons">
-            <a href="#">Login/Register</a>
+            <a href="../user_login.php">Login/Register</a>
         </div>
     
     </header>
@@ -133,10 +135,10 @@ if (isset($_POST["submit"])) {
     </div>
 
     <footer>
-        <a href="AboutUs.html">About Us</a> |
-        <a href="ContactUs.html">Contact Us</a> |
-        <a href="Terms&Conditions.html">Terms & Conditions</a> |
-        <a href="#">FAQs</a>
+        <a href="../AboutUs.html">About Us</a> |
+        <a href="../add_new.php">Contact Us</a> |
+        <a href="../Terms&Conditions.html">Terms & Conditions</a> |
+        <a href="../FAQ.html">FAQs</a>
     </footer>
 </body>
 </html>

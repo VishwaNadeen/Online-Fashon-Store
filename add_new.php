@@ -45,21 +45,22 @@ if (isset($_POST["submit"]))
         <a href="Home.html">HOME</a>
         <a href="Men.html">MEN</a>
         <a href="Women.html">WOMEN</a>
-        <a href="Kids.html">KIDS</a> 
+        <a href="Kids.html">KIDS</a>
         <a href="New-Arrivals.html">NEW ARRIVALS</a>
-        <a href="add_new.php" class="active">CONTACT US</a>
         </nav>
         
         <div class="search-bar">
-            <input type="text" placeholder="Search for products, categories and more" />
+            <input type="text" placeholder="Search for products, categories and more">
         </div>
         
-        <div class="cart">
-            <img href="../src/fash/fash.php" src="Images/cart.png" class="cart-icon">
-        </div>   
+        <a href="cart/index.php">
+            <div class="cart">
+                <img src="Images/cart.png" class="cart-icon">
+            </div>
+        </a>
     
         <div class="h-icons">
-            <a href="#">Login/Register</a>
+            <a href="user_login.php">Login/Register</a>
         </div>
     
     </header>

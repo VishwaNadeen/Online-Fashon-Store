@@ -4,7 +4,7 @@
 
   
   <title>Add to Cart</title>
-  <link rel="stylesheet" href="Fash.css">
+  <link rel="stylesheet" href="cart.css">
   <link rel="stylesheet" href="../Styles/footer.css">
   <link rel="stylesheet" href="../Styles/header.css">
 </head>
@@ -13,24 +13,26 @@
 
 <header>
         <div class="logo">
-            <h1><a href="http://localhost/src/Home.html">AUROSE FASHION</a></h1>
+            <h1><a href="../Home.html">AUROSE FASHION</a></h1>
         </div>
     
         <nav>
-        <a href="http://localhost/src/Home.html">HOME</a>
-        <a href="http://localhost/src/Men.html">MEN</a>
-        <a href="http://localhost/src/Women.html">WOMEN</a>
-        <a href="http://localhost/src/Kids.html">KIDS</a>
-        <a href="http://localhost/src/New-Arrivals.html">NEW ARRIVALS</a>
+        <a href="../Home.html">HOME</a>
+        <a href="../Men.html">MEN</a>
+        <a href="../Women.html">WOMEN</a>
+        <a href="../Kids.html">KIDS</a>
+        <a href="../New-Arrivals.html">NEW ARRIVALS</a>
         </nav>
         
         <div class="search-bar">
-            <input type="text" placeholder="Search for products, categories and more" />
+            <input type="text" placeholder="Search for products, categories and more">
         </div>
         
-        <div class="cart">
-            <img href ="index_delivary.php" src="../Images/cart.png" class="cart-icon">
-        </div>   
+        <a href="index.php">
+            <div class="cart">
+                <img src="../Images/cart.png" class="cart-icon">
+            </div>
+        </a>
     
         <div class="h-icons">
             <a href="../user_login.php">Login/Register</a>
@@ -66,14 +68,13 @@
     </div>
   </div>
 
-  <script src="Fash.js"></script>
-  <script src="script.js"></script>
+  <script src="cart.js"></script>
 
   <footer>
-        <a href="AboutUs.html">About Us</a> |
-        <a href="add_new.php">Contact Us</a> |
-        <a href="Terms&Conditions.html">Terms & Conditions</a> |
-        <a href="FAQ.html">FAQs</a>
+        <a href="../AboutUs.html">About Us</a> |
+        <a href="../add_new.php">Contact Us</a> |
+        <a href="../Terms&Conditions.html">Terms & Conditions</a> |
+        <a href="../FAQ.html">FAQs</a>
 
         <div class="social-links">
             <a href="https://www.facebook.com/yourprofile" target="_blank">
