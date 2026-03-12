@@ -5,15 +5,15 @@
 
 <?php
 
-require 'config.php';
+require '../../config/config.php';
 
 // Display success message if present
 if (isset($_GET['message'])) {
     echo "<p style='color: green;'>" . htmlspecialchars($_GET['message']) . "</p>";
 }
 
-// SQL query to select all records from the placeorder table
-$sql = "SELECT id, name, address, city, province, pcode, phone FROM delivery"; // Assume 'id' is the primary key in 'placeorder' table
+// SQL query to select all records from the delivery table
+$sql = "SELECT id, name, address, city, province, pcode, phone FROM delivery"; // Assume 'id' is the primary key in 'delivery' table
 
 $result = $conn->query($sql);
 
@@ -83,7 +83,7 @@ $conn->close();
 </a> 
 <br>
 
-<a href="http://localhost/src/Home.html">
+<a href="/Online-Fashon-Store/pages/home/index.html">
     <button>BACK TO HOME</button>
 </a>
 

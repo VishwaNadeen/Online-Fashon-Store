@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="footer.css">
 
 <?php
-require 'config.php';
+require '../../config/config.php';
 
 // Check if 'id' is present in the URL
 if (isset($_GET['id'])) {

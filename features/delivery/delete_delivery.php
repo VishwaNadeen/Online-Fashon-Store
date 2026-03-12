@@ -1,6 +1,6 @@
 <?php
 
-require 'config.php';
+require '../../config/config.php';
 
 // Check if 'id' is passed in the URL
 if (isset($_GET['id'])) {
@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
 
     // Prepare SQL statement to delete the record
     $sql = "DELETE FROM delivery WHERE id = ?";
-    $stmt = $connect->prepare($sql);
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
 
     // Execute the statement

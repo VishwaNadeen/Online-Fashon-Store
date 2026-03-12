@@ -4,14 +4,14 @@
 
 <?php
 
-require 'config.php';
+require '../../config/config.php';
 
 // Display success message if present
 if (isset($_GET['message'])) {
     echo "<p style='color: green;'>" . htmlspecialchars($_GET['message']) . "</p>";
 }
 
-// SQL query to select all records from the placeorder table
+// SQL query to select all records from the payment table
 $sql = "SELECT id, cNumber, exDate, cvv, cName, holderName FROM payment"; //
 
 $result = $conn->query($sql);
@@ -61,7 +61,7 @@ $conn->close();
 
 <!-- Add the button to redirect to the index.php page -->
 <br>
-<a href="http://localhost/src/Home.html">
+<a href="/Online-Fashon-Store/pages/home/index.html">
     <button>BACK TO HOME</button>
 </a> <br>
 

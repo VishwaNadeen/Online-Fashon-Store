@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require '../../config/config.php';
 
 if(isset($_POST["submit"])){
     $cardNo = $_POST["cardNumber"];

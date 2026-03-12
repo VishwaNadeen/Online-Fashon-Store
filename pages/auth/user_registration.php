@@ -14,25 +14,47 @@
 
         // Check if passwords match
         if($u_userpassword !== $conf_u_userpassword) {
-            echo "<script>alert('Passwords do not match');</script>";
+            echo "<script>document.getElementById('error-message').style.display='block'; document.getElementById('error-message').textContent='Passwords do not match.';</script>";
         } else {
-            // Insert query with prepared statements
-            $insert_query = "INSERT INTO user_table (username, user_email, user_password, user_name, user_gender, user_address, user_mobile) 
-                             VALUES (?, ?, ?, ?, ?, ?, ?)";
+            // Check if email already exists
+            $check_email = "SELECT user_email FROM user_table WHERE user_email = ?";
+            $stmt_check = mysqli_prepare($conn, $check_email);
+            mysqli_stmt_bind_param($stmt_check, "s", $u_useremail);
+            mysqli_stmt_execute($stmt_check);
+            $result = mysqli_stmt_get_result($stmt_check);
+            
+            if(mysqli_num_rows($result) > 0) {
+                echo "<script>document.getElementById('error-message').style.display='block'; document.getElementById('error-message').textContent='This email is already registered. Please use a different email.';</script>";
+            } else {
+                // Check if username already exists
+                $check_username = "SELECT username FROM user_table WHERE username = ?";
+                $stmt_check_username = mysqli_prepare($conn, $check_username);
+                mysqli_stmt_bind_param($stmt_check_username, "s", $u_username);
+                mysqli_stmt_execute($stmt_check_username);
+                $result_username = mysqli_stmt_get_result($stmt_check_username);
+                
+                if(mysqli_num_rows($result_username) > 0) {
+                    echo "<script>document.getElementById('error-message').style.display='block'; document.getElementById('error-message').textContent='This username is already taken. Please choose a different username.';</script>";
+                } else {
+                    // Insert query with prepared statements
+                    $insert_query = "INSERT INTO user_table (username, user_email, user_password, user_name, user_gender, user_address, user_mobile) 
+                                     VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-            $stmt = mysqli_prepare($conn, $insert_query);
-            mysqli_stmt_bind_param($stmt, "sssssss", $u_username, $u_useremail, $u_userpassword, $u_fullname, $u_gender, $u_address, $u_phonenumber);
+                    $stmt = mysqli_prepare($conn, $insert_query);
+                    mysqli_stmt_bind_param($stmt, "sssssss", $u_username, $u_useremail, $u_userpassword, $u_fullname, $u_gender, $u_address, $u_phonenumber);
 
-            $sql_execute = mysqli_stmt_execute($stmt);
+                    $sql_execute = mysqli_stmt_execute($stmt);
 
-            if($sql_execute)
-            {
-                header('Location: /Online-Fashon-Store/pages/auth/user_login.php');
-                exit();  // Ensure no further code is executed after redirection
-            }
-            else
-            {
-                die(mysqli_error($conn));
+                    if($sql_execute)
+                    {
+                        header('Location: /Online-Fashon-Store/pages/auth/user_login.php');
+                        exit();  // Ensure no further code is executed after redirection
+                    }
+                    else
+                    {
+                        echo "<script>document.getElementById('error-message').style.display='block'; document.getElementById('error-message').textContent='Registration failed. Please try again.';</script>";
+                    }
+                }
             }
         }
     }
@@ -106,9 +128,25 @@
             <div class="login-link">
                 <p>Already have an account? <a href="/Online-Fashon-Store/pages/auth/user_login.php" class="login">Log In</a></p>
             </div>
+            
+            <!-- Error Display Area -->
+            <div id="error-message" style="color: red; margin-top: 10px; text-align: center; display: none;"></div>
         </form>
     </div>
     <script>
+        // Clear error message when user starts typing
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input[type="text"], input[type="password"], input[type="email"], select');
+            const errorDiv = document.getElementById('error-message');
+            
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    errorDiv.style.display = 'none';
+                    errorDiv.textContent = '';
+                });
+            });
+        });
+        
         // Function to validate form inputs
         function validateDetails(event) {
             const password = document.getElementById("pass").value;
@@ -117,14 +155,16 @@
 
             // Password match check
             if (password !== confirmPassword) {
-                alert("Passwords do not match.");
+                document.getElementById('error-message').style.display='block';
+                document.getElementById('error-message').textContent='Passwords do not match.';
                 event.preventDefault();  // Stop form submission
                 return false;
             }
 
             // Phone number length check (Assuming 10 digits)
             if (phone.length !== 10) {
-                alert("Please enter a valid 10-digit phone number.");
+                document.getElementById('error-message').style.display='block';
+                document.getElementById('error-message').textContent='Please enter a valid 10-digit phone number.';
                 event.preventDefault();  // Stop form submission
                 return false;
             }

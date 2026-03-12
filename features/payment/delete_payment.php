@@ -1,6 +1,6 @@
 <?php
 
-require 'config.php';
+require '../../config/config.php';
 
 // Check if 'id' is passed in the URL
 if (isset($_GET['id'])) {
